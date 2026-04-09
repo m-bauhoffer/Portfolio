@@ -5,22 +5,22 @@
     flex-direction: column;
 
 
-    article{
+    article {
         // height: 10em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 4.5em;
 
-        h2{
+        h2 {
             margin: 0;
 
-            &:hover{
+            &:hover {
                 color: v.$clr-main;
                 transition: all ease .1s;
             }
         }
-  
+
     }
 
     header {
@@ -28,6 +28,12 @@
         font-weight: bold;
 
         margin-left: 2.5rem;
+
+        span {
+            font-size: 1.5em;
+            font-family: "DIN-condensed-bold";
+        }
+
         .even {
             text-align: right;
             margin-right: 2.5rem;

@@ -566,6 +566,10 @@ p {
   font-weight: bold;
   margin-left: 2.5rem;
 }
+.projects header span {
+  font-size: 1.5em;
+  font-family: "DIN-condensed-bold";
+}
 .projects header .even {
   text-align: right;
   margin-right: 2.5rem;

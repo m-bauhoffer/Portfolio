@@ -3,32 +3,44 @@ const projects = [
     {
         name: "EXPENSES APP",
         position: "FULL STACKDEVELOPER",
-        description: "APP DE CONTROL FINANCIERO"
+        devices : "MOBILE | DESKTOP",
+        description: "APP DE CONTROL FINANCIERO",
+        link: "https://bhf-instituto.github.io/expenses_api/"
     },
     {
         name: "STOCK APP",
         position: "FULL STACK DEVELOPER",
-        description: "APP PARA CONTROLAR EL STOCK DE PRODUCTOS"
+        devices : "MOBILE",
+        description: "APP PARA CONTROLAR EL STOCK DE PRODUCTOS",
+        link: "https://m-bauhoffer.github.io/StockApp/"
     },
     {
         name: "SHÄFFER'S CODES PAGE",
         position: "SEMI FULL STACK DEVELOPER",
-        description: "APP PARA ENTREGAR CÓDIGOS DE DESCUENTO A CLIENTES"
+        devices : "MOBILE",        
+        description: "APP PARA ENTREGAR CÓDIGOS DE DESCUENTO A CLIENTES",
+        link: "https://m-bauhoffer.github.io/ShaffersCodePage/"
     },
     {
         name: "GALL BRANDS",
         position: "FRONT END DEVELOPER",
-        description: "LANDING PAGE ASD ASASD ASD "
+        devices : "MOBILE | DESKTOP",
+        description: "LANDING PAGE PARA MARCA ",
+        link: "https://m-bauhoffer.github.io/gallBrands/"
     },
     {
         name: "DND INVENTORY",
         position: "FRONT END DEVELOPER",
-        description: "WEB APP ASJKJKDNSAASD"
+        devices : "MOBILE",
+        description: "WEB APP INVENTARIO PARA JUEGOS DE ROL",
+        link: "https://m-bauhoffer.github.io/DnD-Inventory-React/"
     },
     {
         name: "DND DICES",
         position: "FRONT END DEVELOPER",
-        description: "WEB APP ASJKJKDNSAASD"
+        devices : "MOBILE",
+        description: "WEB APP TIRADAS DE DADOS PARA JUEGOS DE ROL",
+        link: "https://m-bauhoffer.github.io/DnD-Dices/"
     },
 ];
 
@@ -37,7 +49,7 @@ hr.className ="hr-span";
 
 containerProjects.appendChild(hr);
 
-projects.forEach(({ name, position, description }, i) => {
+projects.forEach(({ name, position,devices, description, link }, i) => {
     const article = document.createElement("article");
     const isEven = (i%2 == 0);
     const className = (isEven ? "even" : "odd");
@@ -45,10 +57,10 @@ projects.forEach(({ name, position, description }, i) => {
 
     article.innerHTML = `
         <header>
-            <p class="${className}">${description}</p>
+        <p class="${className}"><span>${devices}</span>&nbsp;&nbsp;&nbsp;&nbsp; ${description}</p>
         </header>
         <h2 class="t-${className}">
-            <a href="">${name +" - "+ position}</a>
+        <a href="${link}">${name +" - "+ position}</a>
         </h2>
         <span class="hr-span"></span> 
     `;
