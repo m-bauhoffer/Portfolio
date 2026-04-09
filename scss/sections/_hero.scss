@@ -1,0 +1,79 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+
+.hero {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+
+
+    header {
+        
+        display: flex;
+        height: 2rem;
+        // height:max-content;
+        width: inherit;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: clamp(1rem, -0.143rem + 1.786vw, 2rem);
+        padding: 0 3rem;
+
+        .position {
+            flex-grow: 0.6;
+        }
+        .contact{
+            padding-right: 0;
+        }
+    }
+
+    main {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+        h1 {
+            display: flex;
+            margin: 0;
+
+            span {
+                margin-right: -0.07em;
+            }
+        }
+
+        .span-about{
+            font-weight: bold;
+            letter-spacing: .1em;
+            // color: v.$clr-main;
+        }
+        .title__top {
+            gap: .1em;
+        }
+
+        .title__bottom {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            aside {
+                padding: 0;
+                @include m.device("xmd") {
+                    padding: 0 1em;
+                }
+
+                p {
+                    word-spacing: 0.4em;
+                    margin: 0;
+                }
+
+                .scroll__down {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@use "utils/variables" as v;
+@use "utils/mixins" as m;
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+*{
+    color: v.$clr-white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h4 {
+    margin: .2em 0;
+    font-family: "DIN-condensed-bold";
+    line-height: 0.8em;
+
+}
+
+h1 {
+    @include m.device("xmd") {
+        font-size: clamp(15.5rem, 2.026rem + 21.053vw, 20rem);
+    }
+
+    @include m.device("lg") {
+        font-size: clamp(20rem, 0.274rem + 23.105vw, 28rem);
+    }
+
+    @include m.device("xlg") {
+        font-size: 28rem;
+    }
+}
+
+h2 {
+
+    font-family: "DIN-condensed-bold";
+    line-height: 1em;
+    font-size: 15rem;
+    white-space: nowrap;
+
+    @include m.device("xmd") {
+        font-size: clamp(8rem, 2.012rem + 9.357vw, 10rem);
+    }
+
+    @include m.device("lg") {
+        font-size: clamp(10rem, 0.112rem + 11.573vw, 14rem);
+    }
+
+    @include m.device("xlg") {
+        font-size: 14rem;
+    }
+}
+
+h4 {
+    letter-spacing: -0.05em;
+
+    @include m.device("xmd") {
+        font-size: clamp(4.5rem, 0.009rem + 7.018vw, 6rem);
+
+    }
+
+    @include m.device("lg") {
+        font-size: clamp(6rem, -0.18rem + 7.233vw, 8.5rem);
+    }
+
+    @include m.device("xlg") {
+        font-size: 8.5rem;
+    }
+}
+
+p {
+    font-family: 'open-sauce-italic';
+
+    @include m.device("xmd") {
+        font-size: clamp(0.8rem, 0.201rem + 0.936vw, 1rem);
+
+    }
+
+    @include m.device("lg") {
+        font-size: clamp(1rem, 0.258rem + 0.868vw, 1.3rem);
+    }
+
+    @include m.device("xlg") {
+        font-size: 1.3rem;
+    }
+}
+
+.hvr-sweep-to-top {
+    border-radius: 2rem;
+    padding: .5rem;
+    letter-spacing: .2em;
+    font-family: 'open-sauce-italic';
+    overflow: hidden;
+    border: solid 2px v.$clr-white;
+
+    background-color: transparent;
+
+    &::before {
+        // border-radius: inherit;
+        background-color: v.$clr-main;
+    }
+}
+
+
+.hr-span {
+    border-top: solid 1px v.$clr-white;
+    margin: 0 auto;
+    width: 90%;
+    // overflow: hidden;
+}

@@ -1,0 +1,27 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+
+
+    article{
+        // height: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4.5em;
+
+        h2{
+            margin: 0;
+        }
+  
+    }
+
+    header {
+        padding: 0 3rem;
+
+        .even {
+            text-align: right;
+        }
+    }
+
+}

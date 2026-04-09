@@ -1,0 +1,35 @@
+@use "./variables" as v;
+
+// Mixin para media queries responsive
+@mixin device($size) {
+    @if $size == "xsm" {
+        @media (min-width: v.$breakpoint-xs) {
+            @content;
+        }
+    }
+    @else if $size == "s" {
+        @media (min-width: v.$breakpoint-s) {
+            @content;
+        }
+    }
+    @else if $size == "md" {
+        @media (min-width: v.$breakpoint-md) {
+            @content;
+        }
+    }
+    @else if $size == "xmd" {
+        @media (min-width: v.$breakpoint-xmd) {
+            @content;
+        }
+    }
+    @else if $size == "lg" {
+        @media (min-width: v.$breakpoint-lg) {
+            @content;
+        }
+    }
+    @else if $size == "xlg" {
+        @media (min-width: v.$breakpoint-xlg) {
+            @content;
+        }
+    }
+}
