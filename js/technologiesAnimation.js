@@ -14,7 +14,7 @@ articles.forEach(article => {
     scrollTrigger: {
       trigger: article,
       start: "top 80%",
-      toggleActions: "play none none none" // 👈 solo una vez
+      toggleActions: "play none none none" 
     }
   });
 });
