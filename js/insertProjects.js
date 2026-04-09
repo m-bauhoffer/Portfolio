@@ -12,7 +12,7 @@ const projects = [
         position: "FULL STACK DEVELOPER",
         devices : "MOBILE",
         description: "APP PARA CONTROLAR EL STOCK DE PRODUCTOS",
-        link: "https://m-bauhoffer.github.io/StockApp/"
+        link: "https://m-bauhoffer.github.io/StockApp_v2/?demo=1"
     },
     {
         name: "SHÄFFER'S CODES PAGE",
