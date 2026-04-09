@@ -1,35 +1,49 @@
-.technologies{
+.technologies {
     height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
-    
-    article{
+
+    article {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        // height: 100%;
+        // gap: 1rem;
 
-        h4{
-            width: 40%;
-            // margin: 0;
-            // padding: 0;
-            
+    
+        h3 {
+            // width: 50%;
+            // font-size: 5rem;
+            // text-align: left;
         }
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-        
-        .tech_img_container{
-            display: flex;
-            gap: clamp(3rem, -0.429rem + 5.357vw, 6rem);
-            
 
-            .img_container{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                img{
-                    height: clamp(3rem, -0.429rem + 5.357vw, 6rem);
+        .tech_img_container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 10%;
+            // gap: clamp(3rem, -0.429rem + 5.357vw, 6rem);
+
+            .img_container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    height: clamp(3rem, 0.714rem + 3.571vw, 5rem);
+                    filter: grayscale(1);
+                    // height: clamp(3rem, -0.429rem + 5.357vw, 6rem);
+                
+                    &:hover{
+                        filter: none;
+                        transform: scale(1.2);
+                        transition: all ease .3s;
+                    }
                 }
+
             }
         }
     }

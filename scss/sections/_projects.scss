@@ -1,3 +1,5 @@
+@use "../utils/variables" as v;
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -12,15 +14,23 @@
 
         h2{
             margin: 0;
+
+            &:hover{
+                color: v.$clr-main;
+                transition: all ease .1s;
+            }
         }
   
     }
 
     header {
         padding: 0 3rem;
+        font-weight: bold;
 
+        margin-left: 2.5rem;
         .even {
             text-align: right;
+            margin-right: 2.5rem;
         }
     }
 

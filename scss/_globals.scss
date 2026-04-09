@@ -6,8 +6,8 @@ body {
     background-color: black;
 }
 
-*{
-    color: v.$clr-white;
+* {
+    color: v.$clr-gray;
 }
 
 a {
@@ -17,7 +17,9 @@ a {
 
 h1,
 h2,
-h4 {
+h3,
+h4,
+h5 {
     margin: .2em 0;
     font-family: "DIN-condensed-bold";
     line-height: 0.8em;
@@ -25,6 +27,8 @@ h4 {
 }
 
 h1 {
+    color: v.$clr-gray;
+
     @include m.device("xmd") {
         font-size: clamp(15.5rem, 2.026rem + 21.053vw, 20rem);
     }
@@ -36,6 +40,10 @@ h1 {
     @include m.device("xlg") {
         font-size: 28rem;
     }
+}
+
+.p-sm {
+    font-size: .8em;
 }
 
 h2 {
@@ -56,6 +64,15 @@ h2 {
     @include m.device("xlg") {
         font-size: 14rem;
     }
+}
+
+h5 {
+    font-family: "DIN";
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 h4 {
@@ -110,8 +127,11 @@ p {
 
 
 .hr-span {
+    min-height: 1px;
     border-top: solid 1px v.$clr-white;
     margin: 0 auto;
     width: 90%;
+    display: block;
+    transform: scaleX(0);
     // overflow: hidden;
 }

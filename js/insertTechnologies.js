@@ -46,7 +46,9 @@ const technologies = [
 technologies.forEach((tech) => {
     const article = document.createElement("article");
 
-    const title = document.createElement("h4");
+    // const titleContainer = document.createElement("div");
+    // titleContainer.classList.add("");
+    const title = document.createElement("h3");
     title.textContent = tech.group;
 
     const imgContainer = document.createElement("div");
@@ -61,6 +63,7 @@ technologies.forEach((tech) => {
         image.alt = t.name;
 
         const name = document.createElement("p");
+        name.classList.add("p-sm")
         name.textContent = t.name;
 
         divImg.appendChild(image);
@@ -69,7 +72,7 @@ technologies.forEach((tech) => {
         imgContainer.appendChild(divImg);
     });
 
-    article.appendChild(title);
+    // article.appendChild(title);
     article.appendChild(imgContainer);
 
     containerTech.appendChild(article);

@@ -3,12 +3,12 @@ const projects = [
     {
         name: "EXPENSES APP",
         position: "FULL STACKDEVELOPER",
-        description: "APP PARA CONTROLAR LOS GASTOS E INGRESOS DE LOS USUARIOS"
+        description: "APP DE CONTROL FINANCIERO"
     },
     {
         name: "STOCK APP",
         position: "FULL STACK DEVELOPER",
-        description: "APP PARA CONTROLAR EL STOCK DE PRODUCTOS PARA COMERCIOS"
+        description: "APP PARA CONTROLAR EL STOCK DE PRODUCTOS"
     },
     {
         name: "SHÄFFER'S CODES PAGE",
@@ -47,7 +47,7 @@ projects.forEach(({ name, position, description }, i) => {
         <header>
             <p class="${className}">${description}</p>
         </header>
-        <h2 class="${className}">
+        <h2 class="t-${className}">
             <a href="">${name +" - "+ position}</a>
         </h2>
         <span class="hr-span"></span> 

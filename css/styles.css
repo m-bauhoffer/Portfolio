@@ -309,6 +309,12 @@ template {
 }
 
 @font-face {
+  font-family: "DIN";
+  src: url("../assets/fonts/D-DIN.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "DIN-condensed-bold";
   src: url("../assets/fonts/D-DINCondensed-Bold.otf") format("opentype");
   font-weight: normal;
@@ -338,7 +344,7 @@ body {
 }
 
 * {
-  color: #ececec;
+  color: #7e7b7b;
 }
 
 a {
@@ -348,12 +354,17 @@ a {
 
 h1,
 h2,
-h4 {
+h3,
+h4,
+h5 {
   margin: 0.2em 0;
   font-family: "DIN-condensed-bold";
   line-height: 0.8em;
 }
 
+h1 {
+  color: #7e7b7b;
+}
 @media (min-width: 1024px) {
   h1 {
     font-size: clamp(15.5rem, 2.026rem + 21.053vw, 20rem);
@@ -368,6 +379,10 @@ h4 {
   h1 {
     font-size: 28rem;
   }
+}
+
+.p-sm {
+  font-size: 0.8em;
 }
 
 h2 {
@@ -390,6 +405,15 @@ h2 {
   h2 {
     font-size: 14rem;
   }
+}
+
+h5 {
+  font-family: "DIN";
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 3rem;
 }
 
 h4 {
@@ -440,13 +464,16 @@ p {
   background-color: transparent;
 }
 .hvr-sweep-to-top::before {
-  background-color: #1748a5;
+  background-color: #c7912c;
 }
 
 .hr-span {
+  min-height: 1px;
   border-top: solid 1px #ececec;
   margin: 0 auto;
   width: 90%;
+  display: block;
+  transform: scaleX(0);
 }
 
 .hero {
@@ -471,6 +498,7 @@ p {
 }
 .hero main {
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -482,9 +510,13 @@ p {
 .hero main h1 span {
   margin-right: -0.07em;
 }
+.hero main h1 span:hover {
+  color: #ececec;
+}
 .hero main .span-about {
   font-weight: bold;
   letter-spacing: 0.1em;
+  color: #ececec;
 }
 .hero main .title__top {
   gap: 0.1em;
@@ -525,11 +557,18 @@ p {
 .projects article h2 {
   margin: 0;
 }
+.projects article h2:hover {
+  color: #c7912c;
+  transition: all ease 0.1s;
+}
 .projects header {
   padding: 0 3rem;
+  font-weight: bold;
+  margin-left: 2.5rem;
 }
 .projects header .even {
   text-align: right;
+  margin-right: 2.5rem;
 }
 
 .technologies {
@@ -541,13 +580,15 @@ p {
 }
 .technologies article {
   display: flex;
-}
-.technologies article h4 {
-  width: 40%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .technologies article .tech_img_container {
   display: flex;
-  gap: clamp(3rem, -0.429rem + 5.357vw, 6rem);
+  width: 100%;
+  justify-content: center;
+  gap: 10%;
 }
 .technologies article .tech_img_container .img_container {
   display: flex;
@@ -555,7 +596,13 @@ p {
   align-items: center;
 }
 .technologies article .tech_img_container .img_container img {
-  height: clamp(3rem, -0.429rem + 5.357vw, 6rem);
+  height: clamp(3rem, 0.714rem + 3.571vw, 5rem);
+  filter: grayscale(1);
+}
+.technologies article .tech_img_container .img_container img:hover {
+  filter: none;
+  transform: scale(1.2);
+  transition: all ease 0.3s;
 }
 
 .contact {
@@ -570,10 +617,29 @@ p {
   display: flex;
   flex-direction: column;
 }
+.contact .contact__marquee .marquee__inner {
+  display: inline-flex;
+}
+.contact .contact__marquee .marquee__inner span {
+  margin-right: 2rem;
+}
+.contact .contact__marquee .marquee__inner span:hover {
+  color: #c7912c;
+  transition: all ease 0.1s;
+}
 .contact footer {
   display: flex;
   justify-content: space-between;
 }
 .contact .contact__email {
   font-size: 200%;
+}
+.contact .contact__buttons {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 2em;
+}
+.contact .contact__buttons button {
+  padding: 0.8em;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,6 @@
-.contact{
+@use "../utils/variables" as v;
+
+.contact {
     text-align: center;
     // height: 100svh;
     padding: 1rem;
@@ -8,18 +10,40 @@
     gap: clamp(5rem, 1.571rem + 5.357vw, 8rem);
     // justify-content: space-between;
 
-    .contact__marquee{
+    .contact__marquee {
         display: flex;
         flex-direction: column;
+
+        .marquee__inner{
+            display: inline-flex;
+
+            span{
+                margin-right: 2rem;
+
+                 &:hover {
+                color: v.$clr-main;
+                transition: all ease .1s;
+            }
+            }
+        }
     }
 
-    footer{
+    footer {
         // margin-top: auto;
         display: flex;
         justify-content: space-between;
     }
 
-    .contact__email{
+    .contact__email {
         font-size: 200%;
+    }
+    .contact__buttons{
+        display: flex;
+        height: fit-content;
+        gap: 2em;
+
+        button{
+            padding: .8em;
+        }
     }
 }

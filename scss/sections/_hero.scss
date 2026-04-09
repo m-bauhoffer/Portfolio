@@ -28,11 +28,11 @@
 
     main {
         height: 100%;
+        overflow: hidden;
 
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-
 
         h1 {
             display: flex;
@@ -40,13 +40,17 @@
 
             span {
                 margin-right: -0.07em;
+                
+                &:hover{
+                    color : v.$clr-white;
+                }
             }
         }
 
         .span-about{
             font-weight: bold;
             letter-spacing: .1em;
-            // color: v.$clr-main;
+            color: v.$clr-white;
         }
         .title__top {
             gap: .1em;
