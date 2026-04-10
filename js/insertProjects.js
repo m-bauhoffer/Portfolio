@@ -19,7 +19,7 @@ const projects = [
         position: "SEMI FULL STACK DEVELOPER",
         devices : "MOBILE",        
         description: "APP PARA ENTREGAR CÓDIGOS DE DESCUENTO A CLIENTES",
-        link: "https://m-bauhoffer.github.io/ShaffersCodePage/"
+        link: "https://shafferscode.web.app/"
     },
     {
         name: "GALL BRANDS",
