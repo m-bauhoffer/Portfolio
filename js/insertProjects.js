@@ -5,8 +5,7 @@ const projects = [
         position: "FULL STACKDEVELOPER",
         devices : "MOBILE | DESKTOP",
         description: "APP DE CONTROL FINANCIERO",
-        link: "https://bhf-instituto.github.io/expenses_api/"
-        // link: "https://m-bauhoffer.github.io/expenses_app/auth?demo=portfolio"
+        link: "https://m-bauhoffer.github.io/expenses_app/auth?demo=portfolio"
     },
     {
         name: "STOCK APP",
